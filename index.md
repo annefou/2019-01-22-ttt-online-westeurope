@@ -14,7 +14,8 @@ enddate: 2019-01-23        # machine-readable end date for the workshop in YYYY-
 instructor: ["Aleksandra Nenadic", "Anne Fouilloux"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: [""]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
 contact: ["a.nenadic@manchester.ac.uk", "annefou@geo.uio.no"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-etherpad: https://pad.carpentries.org/2019-01-22-ttt-online-westeurope            # optional: URL for the workshop Etherpad if there is one
+etherpad1:   https://docs.google.com/document/d/1OjZ_FYCLGbn8Tzmyk2Jm6HY-Bu28C80eJB1e8lVmLrg/edit?usp=sharing         # optional: URL for the workshop Etherpad if there is one
+etherpad2:   https://docs.google.com/document/d/17gUMZ6WW3th3ATs9Ro6mWFIt0Ilg4RySmg2aEoBq7-Y/edit?usp=sharing         # optional: URL for the workshop Etherpad if there is one
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
@@ -294,5 +295,20 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
   <strong>Etherpad:</strong> <a href="{{page.etherpad}}">{{page.etherpad}}</a>.
   <br/>
   We will use this Etherpad for chatting, taking notes, and sharing URLs and bits of code.
+</p>
+{% endif %}
+{% if page.etherpad1 %}
+<hr/>
+
+<p id="etherpad">
+  <strong>Google doc day-1:</strong> <a href="{{page.etherpad1}}">{{page.etherpad1}}</a>.
+  <br/>
+  <strong>Google doc day-2:</strong> <a href="{{page.etherpad2}}">{{page.etherpad2}}</a>.
+  <br/>
+  We will use these google docs for taking notes, and sharing URLs and bits of code.
+</p>
+
+<p>
+  After the workshop, please fill out <a href="https://carpentries.github.io/instructor-training/06-feedback/#surveys">our post-assessment survey</a>.
 </p>
 {% endif %}
